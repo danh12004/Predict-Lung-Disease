@@ -1,0 +1,28 @@
+artifacts_root: artifacts
+
+data_ingestion:
+  root_dir: artifacts/data_ingestion
+  source_URL: https://drive.google.com/uc?id=1AtIPhcUQrUBWOw7_S2a8ay1Oz8U6Ls0L
+  local_data_file: artifacts/data_ingestion/data.zip
+  unzip_dir: artifacts/data_ingestion
+
+data_split:
+  root_dir: artifacts/data_split
+  train_dir: artifacts/data_split/train
+  val_dir: artifacts/data_split/val
+  test_dir: artifacts/data_split/test
+  split_ratios: [0.7, 0.2, 0.1]
+
+prepare_base_model:
+  root_dir: artifacts/prepare_base_model
+  base_model_path: artifacts/prepare_base_model/base_model.pt
+  updated_base_model_path: artifacts/prepare_base_model/base_model_updated.pt
+
+prepare_callbacks:
+  root_dir: artifacts/prepare_callbacks
+  tensorboard_root_log_dir: artifacts/prepare_callbacks/tensorboard_log_dir
+  checkpoint_model_filepath: artifacts/prepare_callbacks/checkpoint_dir/model.pt
+
+training:
+  root_dir: artifacts/training
+  trained_model_path: artifacts/training/model.pt
